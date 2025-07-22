@@ -10,7 +10,7 @@ Dans ce projet, j'explore l'utilisation de la régression logistique pour prédi
 - Comparer les résultats avec features brutes et épurées
 - Simuler une stratégie de trading filtrée par confiance (> 75%)
 
-## 📊 Méthodologie
+## Méthodologie
 
 - Librairies : `pandas`, `numpy`, `matplotlib`, `seaborn`, `scikit-learn`, `yfinance`
 - Modèle : `LogisticRegression` de scikit-learn
@@ -53,7 +53,7 @@ Dans ce projet, j'explore l'utilisation de la régression logistique pour prédi
 
 ---
 
-### ⏱️ Comportement de la stratégie dans le temps
+### Comportement de la stratégie dans le temps
 
 - **📈 Phase de hausse (25/04/2021 → 24/04/2024)**  
   → Le capital monte de **1.0000** à **1.1114** → **+11.14 %**
@@ -66,7 +66,7 @@ Dans ce projet, j'explore l'utilisation de la régression logistique pour prédi
 Ces résultats montrent que le modèle est relativement robuste en phase de prédiction, mais ma stratégie de trading est très volatile et gère mal les pertes 
 
 
-## 🔮 Idées d'amélioration
+## Idées d'amélioration
 
 - Inclure un **stop-loss** dans ma stratégie pour limiter les pertes
 - Faire un **GridSearchCV** pour optimiser les hyperparamètres du modèle
