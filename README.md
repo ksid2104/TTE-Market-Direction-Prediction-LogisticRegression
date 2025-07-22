@@ -73,7 +73,8 @@ These results show that the model has reasonable predictive power, but the tradi
 
 ## 🔧 Areas for Improvement
 
-- Add a **stop-loss mechanism** to limit drawdowns  
+- Add a **stop-loss mechanism** to limit drawdowns
+- Test a target which causes less noise (1 only if variation +0.5%)
 - Perform **GridSearchCV** to fine-tune model hyperparameters  
 - Compare with **more advanced classifiers** (e.g., SVM, XGBoost)  
-- **Enrich the dataset** with macroeconomic indicators, sentiment analysis, etc.
+- **Enrich the dataset** with macroeconomic indicators, others technical indicators (non correlated), news sentiment analysis, etc...
