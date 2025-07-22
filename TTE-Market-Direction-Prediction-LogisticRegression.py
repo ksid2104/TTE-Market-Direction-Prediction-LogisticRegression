@@ -269,7 +269,7 @@ print("Here is the raw result DataFrame:")
 print(df_strategy.iloc[:, 5:].dropna())
 
 # Visualize strategy performance
-plt.figure
+plt.figure(figsize=(10,5))
 plt.plot(df_strategy.index, df_strategy["Cumulative_return"])
 plt.axhline(highest_performance, color="green", linestyle="--", label="Max performance")
 plt.axvline(df_strategy["Cumulative_return"].idxmax(),color="green", linestyle="--")
