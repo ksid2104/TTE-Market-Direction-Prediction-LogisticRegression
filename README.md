@@ -17,7 +17,7 @@ Dans ce projet, j'explore l'utilisation de la régression logistique pour prédi
 - Split temporel : `TimeSeriesSplit` (préserve la causalité)
 - Visualisation : ROC curve, Matrice de confusion, Coefficients du modèle
 - Librairies : `pandas`, `numpy`, `matplotlib`, `seaborn`, `scikit-learn`, `yfinance`
-
+---
 ## 🧪 Résultats
 
 ### 🎯 Performances du modèle
@@ -32,9 +32,8 @@ Dans ce projet, j'explore l'utilisation de la régression logistique pour prédi
   - Précision* : **0.72**
   - Rappel* : **0.72**
 
-> * Moyenne simple entre précision et rappel pour les deux classes (`0 = baisse`, `1 = hausse`)
+> * Moyenne simple entre précision et recall pour les deux classes (`0 = baisse`, `1 = hausse`)
 
----
 
 ### 📉 Résultats du backtest (confiance > 75 %)
 
@@ -51,7 +50,6 @@ Dans ce projet, j'explore l'utilisation de la régression logistique pour prédi
 | Capital minimum atteint           | 0.8175       |
 | Performance minimale              | -18.25 %     |
 
----
 
 ### Comportement de la stratégie dans le temps
 
@@ -61,10 +59,9 @@ Dans ce projet, j'explore l'utilisation de la régression logistique pour prédi
 - **📉 Phase de baisse (24/04/2024 → 15/07/2025)**  
   → Le capital chute à **0.8249** → **-17.14 %** depuis le pic
 
----
-
 Ces résultats montrent que le modèle est relativement robuste en phase de prédiction, mais ma stratégie de trading est très volatile et gère mal les pertes 
 
+---
 
 ## Idées d'amélioration
 
