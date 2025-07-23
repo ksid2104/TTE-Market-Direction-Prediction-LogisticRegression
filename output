@@ -4,87 +4,91 @@ RESULTS - Training with ALL features (raw, unfiltered)
 ---------------------------------------------------------------------------
 -------------------Here are predictions and probabilities ----------------
    Predictions   Proba 0   Proba 1
-0            0  0.555037  0.444963
-1            0  0.603750  0.396250
-2            0  0.558427  0.441573
-3            1  0.300490  0.699510
-4            0  0.765749  0.234251
-5            0  0.745370  0.254630
-6            1  0.417281  0.582719
-7            1  0.380764  0.619236
-8            1  0.177389  0.822611
-9            1  0.162670  0.837330
+0            0  0.720254  0.279746
+1            0  0.748568  0.251432
+2            0  0.718511  0.281489
+3            1  0.497271  0.502729
+4            0  0.859064  0.140936
+5            0  0.842409  0.157591
+6            0  0.623269  0.376731
+7            0  0.526580  0.473420
+8            1  0.330010  0.669990
+9            1  0.321926  0.678074
 ---------------------------------------------------------------------------
 -----------------------ROC/AUC Score--------------------------
-0.7625180057188313
+0.7231331526405783
 -----------------------Confusion matrix------------------------------
-[[300 182]
- [126 453]]
+[[518 129]
+ [217 197]]
 -----------------------Classification report--------------------------
               precision    recall  f1-score   support
 
-           0       0.70      0.62      0.66       482
-           1       0.71      0.78      0.75       579
+           0       0.70      0.80      0.75       647
+           1       0.60      0.48      0.53       414
 
-    accuracy                           0.71      1061
-   macro avg       0.71      0.70      0.70      1061
-weighted avg       0.71      0.71      0.71      1061
+    accuracy                           0.67      1061
+   macro avg       0.65      0.64      0.64      1061
+weighted avg       0.67      0.67      0.66      1061
 
+C:\Users\kylia\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\linear_model\_logistic.py:470: ConvergenceWarning: lbfgs failed to converge after 100 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
 
+Increase the number of iterations to improve the convergence (max_iter=100).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
 =========================================================================== 
 RESULTS - Training with **filtered** features (after cleaning)
 ===========================================================================
 ---------------------------------------------------------------------------
 -------------------Here are predictions and probabilities ----------------
    Predictions   Proba 0   Proba 1
-0            1  0.357275  0.642725
-1            1  0.495987  0.504013
-2            1  0.381854  0.618146
-3            1  0.071916  0.928084
-4            0  0.816629  0.183371
-5            0  0.812444  0.187556
-6            1  0.138320  0.861680
-7            0  0.532928  0.467072
-8            1  0.094046  0.905954
-9            1  0.090281  0.909719
+0            0  0.554355  0.445645
+1            0  0.687383  0.312617
+2            0  0.585955  0.414045
+3            1  0.097820  0.902180
+4            0  0.886000  0.114000
+5            0  0.898794  0.101206
+6            1  0.243193  0.756807
+7            0  0.677534  0.322466
+8            1  0.172056  0.827944
+9            1  0.159773  0.840227
 ---------------------------------------------------------------------------
 -----------------------ROC/AUC Score--------------------------
-0.8015931030034613
+0.7863196171105586
 -----------------------Confusion matrix------------------------------
-[[346 136]
- [148 431]]
+[[512 135]
+ [159 255]]
 -----------------------Classification report--------------------------
               precision    recall  f1-score   support
 
-           0       0.70      0.72      0.71       482
-           1       0.76      0.74      0.75       579
+           0       0.76      0.79      0.78       647
+           1       0.65      0.62      0.63       414
 
-    accuracy                           0.73      1061
-   macro avg       0.73      0.73      0.73      1061
-weighted avg       0.73      0.73      0.73      1061
+    accuracy                           0.72      1061
+   macro avg       0.71      0.70      0.71      1061
+weighted avg       0.72      0.72      0.72      1061
 
------------------------ Trading Strategy Results --------------------------
-Overall performance (cumulative): -18.52 %
-Initial capital value (Cumulative Return): 1.0
-Final capital value (Cumulative Return): 0.8148
-Number of executed trades: 322
-Maximum capital value (Cumulative Return): 1.0981
-Maximum performance: 9.8082 %
-Minimum capital value (Cumulative Return): 0.807
-Minimum performance: -19.3029 %
-Maximum daily return: 3.62 %
-Minimum daily return: -3.16 %
-Here is the raw result DataFrame:
-            Position    Return  Strategy  Cumulative_return
-Date
-2021-04-26       0.0  0.001349  0.000000           1.000000
-2021-04-27       0.0  0.004268  0.000000           1.000000
-2021-04-28       0.0  0.021149  0.000000           1.000000
-2021-04-29       1.0 -0.010510 -0.010510           0.989490
-2021-04-30       0.0 -0.008953 -0.000000           0.989490
-...              ...       ...       ...                ...
-2025-07-09       1.0 -0.002710 -0.002710           0.822782
-2025-07-10       0.0  0.010165  0.000000           0.822782
-2025-07-11       1.0  0.004624  0.004624           0.826587
-2025-07-14       1.0 -0.014259 -0.014259           0.814801
-2025-07-15       0.0 -0.006879 -0.000000           0.814801
+Best performances from grid search:
+    Prob_value  StopLoss_value  Performance  Highest_Performance  \
+62        0.80           -0.01     7.111909             1.194574
+8         0.50           -0.01     6.676972             1.289350
+53        0.75           -0.01     6.127086             1.161022
+
+    Lowest_Performance   Perf_Max  Perf_Min  Highest_Return  Lowest_Return
+62            0.989490  19.457403 -1.051017        0.036184      -0.027891
+8             0.973858  28.934998 -2.614168        0.036184      -0.027891
+53            0.957353  16.102183 -4.264707        0.036184      -0.027891
+Final performance of the optimized strategy:
+Performance: 7.11%
+Best parameters found : {'Prob_value': 0.8, 'Stop_loss_value': -0.01}
+Initial Capital: 1.00
+Final Capital: 1.07
+Performance Mean: 9.46%
+Performance Standard Deviation: -94.61%
+Performance Max: 19.46%
+Performance Min: -1.05%
+Max Return: -96.38%
+Min Return: -102.79%
