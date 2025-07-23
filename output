@@ -72,7 +72,8 @@ Best performances from grid search:
 8             0.971003  28.557012 -2.899665        0.036184      -0.027891
 53            0.985497  17.715418 -1.450274        0.036184      -0.027891
 62            0.989490  17.006264 -1.051017        0.036184      -0.027891
-Final performance of the optimized strategy:
+
+                                           Final performance of the optimized strategy:
 Performance: 7.71%
 Best parameters found : {'Prob_value': 0.5, 'Stop_loss_value': -0.01}
 Initial Capital: 1.00
