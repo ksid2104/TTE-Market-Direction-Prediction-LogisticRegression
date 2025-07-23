@@ -10,7 +10,7 @@ After noticing a strange phenomenon—where the model was right statistically, w
 This process helped transform a fragile strategy into a profitable one in appearance with controlled drawdowns.
 ## Disclaimer ⚠️
 This project was carried out as part of a learning process: my goal was to understand how to build, test, and improve a trading strategy using machine learning.
-While the final results show an apparent performance of around **+7,11%**, I fully acknowledge that this figure does **not necessarily reflect real-world execution**. It is a backtest on historical data, with all the limitations that come with it (simplified assumptions, possible overfitting, no transaction costs or slippage, etc.).
+While the final results show an apparent performance of around **+7.71%**, I fully acknowledge that this figure does **not necessarily reflect real-world execution**. It is a backtest on historical data, with all the limitations that come with it (simplified assumptions, possible overfitting, no transaction costs or slippage, etc.).
 I don’t claim to have found a reliable strategy — this repository documents my thinking process, iterations, and key takeaways. The main objective is to **develop analytical rigor**, by exploring the limitations of the model and seeking continuous improvement.
 
 ---
@@ -56,19 +56,20 @@ I don’t claim to have found a reliable strategy — this repository documents 
 ---
 
 ### 📉 Backtest results (confidence > 75% and stoploss at -2% cumulated for 2 consecutive days)
+*(With confidence threshold > 75% and stop-loss triggered when cumulative return < -2% for 2 consecutive days)*
 
-| Metric                             | Value        |
-|-----------------------------------|--------------|
-| **Overall cumulative return**     | **+7,11%**  |
-| Initial capital (base 1.0)        | 1.0000       |
-| Final capital                     | 1,0711       |
-| Number of trades executed         | 322          |
-| Max daily return                  | +3.62%       |
-| Min daily return                  | -3.16%       |
-| Peak capital value                | 1.0981       |
-| Max performance                   | +9.8082%     |
-| Lowest capital value              |  0.807       |
-| Min performance                   | -19.3029 %   |
+| Metric                             | Value         |
+|----------------------------------- |---------------|
+| **Overall cumulative return**      | **+7.71%**    |
+| Initial capital (base 1.0)         | 1.0000        |
+| Final capital                      | 1.071         | 
+| Number of trades executed          | 322           |
+| Max performance                    | 28,56%        |
+| Min performance                    | -2,90%        |
+| Performance Mean:                  | 12,37%        |
+| Performance Standard Deviation     | -0,92         |
+| Max daily return                   | 0.807         |
+| Min daily return                   | **-19.30%**   |
 
 ---
 
