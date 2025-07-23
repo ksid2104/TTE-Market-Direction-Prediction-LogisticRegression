@@ -32,11 +32,13 @@ In this project, I explore the use of logistic regression to predict short-term 
   - ROC AUC: **0.76**
   - Precision*: **0.705**
   - Recall*: **0.70**
+  - F1-score: **0.695**
 
 - **Using selected features**:
   - ROC AUC: **0.80**
   - Precision*: **0.72**
   - Recall*: **0.72**
+  - F1-score: **0.73**
 
 > * Simple average between precision and recall across both classes (`0 = down`, `1 = up`)
 
@@ -46,26 +48,26 @@ In this project, I explore the use of logistic regression to predict short-term 
 
 | Metric                             | Value        |
 |-----------------------------------|--------------|
-| **Overall cumulative return**     | **-17.51%**  |
+| **Overall cumulative return**     | **-18.52%**  |
 | Initial capital (base 1.0)        | 1.0000       |
-| Final capital                     | 0.8249       |
-| Number of trades executed         | 316          |
+| Final capital                     | 0.8148       |
+| Number of trades executed         | 322          |
 | Max daily return                  | +3.62%       |
 | Min daily return                  | -3.16%       |
-| Peak capital value                | 1.1114       |
-| Max performance                   | +11.14%      |
-| Lowest capital value              | 0.8175       |
-| Min performance                   | -18.25%      |
+| Peak capital value                | 1.0981       |
+| Max performance                   | +9.8082%     |
+| Lowest capital value              |  0.807       |
+| Min performance                   | -19.3029 %   |
 
 ---
 
 ### ⏱️ Strategy performance over time
 
 - **📈 Growth phase (25/04/2021 → 24/04/2024)**  
-  → Capital increased from **1.0000** to **1.1114** → **+11.14%**
+  → Capital increased from **1.0000** to **1.0981** → **+9.8082%**
 
 - **📉 Decline phase (24/04/2024 → 15/07/2025)**  
-  → Capital dropped to **0.8249** → **-17.14%** from the peak
+  → Capital dropped to **0.807** → **-19.3029%** from the peak
 
 These results show that the model has reasonable predictive power, but the trading strategy is **highly volatile** and struggles with **loss management**.
 
