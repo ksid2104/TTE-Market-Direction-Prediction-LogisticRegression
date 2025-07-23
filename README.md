@@ -1,6 +1,17 @@
-# TTE-Market-Direction-Prediction-LogisticRegression
+# Project Journey
+Initially, I built a model using all raw features and a target very sensitive to micro-variations, which led to noisy predictions and poor strategy performance.
+After noticing a strange phenomenon—where the model was right statistically, went up for 2 years (+11%) then suddendly drop and lost money (-17,14%)— I analyzed the predictions and trading behavior. I then iteratively improved the approach by:
+- Creating a cleaner target variable (only predicting class 1 if price increase > +0.5%) to reduce noise
+- Using feature selection to remove irrelevant or redundant variables
+- Running a grid search to tune two key parameters:
+            -The confidence threshold on the model's probability
+            -A stop-loss rule: exit trade if the cumulative return over 2 consecutive days falls below -2%
 
-In this project, I explore the use of logistic regression to predict short-term market direction based on historical data from TotalEnergies (TTE). It combines **technical analysis**, **financial indicators**, and **machine learning modeling**, with a focus on explainability and a preliminary trading strategy.
+This process helped transform a fragile strategy into a profitable one in appearance with controlled drawdowns.
+## Disclaimer ⚠️
+This project was carried out as part of a learning process: my goal was to understand how to build, test, and improve a trading strategy using machine learning.
+While the final results show an apparent performance of around **+7,11%**, I fully acknowledge that this figure does **not necessarily reflect real-world execution**. It is a backtest on historical data, with all the limitations that come with it (simplified assumptions, possible overfitting, no transaction costs or slippage, etc.).
+I don’t claim to have found a reliable strategy — this repository documents my thinking process, iterations, and key takeaways. The main objective is to **develop analytical rigor**, by exploring the limitations of the model and seeking continuous improvement.
 
 ---
 
@@ -29,28 +40,28 @@ In this project, I explore the use of logistic regression to predict short-term 
 ### 🎯 Model performance
 
 - **Using raw features**:
-  - ROC AUC: **0.76**
-  - Precision*: **0.705**
-  - Recall*: **0.70**
-  - F1-score: **0.695**
+  - ROC AUC: **0.72**
+  - Precision*: **0.65**
+  - Recall*: **0.635**
+  - F1-score: **0.64**
 
 - **Using selected features**:
-  - ROC AUC: **0.80**
-  - Precision*: **0.73**
-  - Recall*: **0.73**
-  - F1-score: **0.73**
+  - ROC AUC: **0.78**
+  - Precision*: **0.705**
+  - Recall*: **0.705**
+  - F1-score: **0.705**
 
 > * Simple average between precision, recall and f1-score across both classes (`0 = down`, `1 = up`)
 
 ---
 
-### 📉 Backtest results (confidence > 75%)
+### 📉 Backtest results (confidence > 75% and stoploss at -2% cumulated for 2 consecutive days)
 
 | Metric                             | Value        |
 |-----------------------------------|--------------|
-| **Overall cumulative return**     | **-18.52%**  |
+| **Overall cumulative return**     | **+7,11%**  |
 | Initial capital (base 1.0)        | 1.0000       |
-| Final capital                     | 0.8148       |
+| Final capital                     | 1,0711       |
 | Number of trades executed         | 322          |
 | Max daily return                  | +3.62%       |
 | Min daily return                  | -3.16%       |
