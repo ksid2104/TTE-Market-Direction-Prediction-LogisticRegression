@@ -1,94 +1,54 @@
 =========================================================================== 
-RESULTS - Training with ALL features (raw, unfiltered)
-===========================================================================
----------------------------------------------------------------------------
--------------------Here are predictions and probabilities ----------------
-   Predictions   Proba 0   Proba 1
-0            0  0.720254  0.279746
-1            0  0.748568  0.251432
-2            0  0.718511  0.281489
-3            1  0.497271  0.502729
-4            0  0.859064  0.140936
-5            0  0.842409  0.157591
-6            0  0.623269  0.376731
-7            0  0.526580  0.473420
-8            1  0.330010  0.669990
-9            1  0.321926  0.678074
----------------------------------------------------------------------------
------------------------ROC/AUC Score--------------------------
-0.7231331526405783
------------------------Confusion matrix------------------------------
-[[518 129]
- [217 197]]
------------------------Classification report--------------------------
-              precision    recall  f1-score   support
-
-           0       0.70      0.80      0.75       647
-           1       0.60      0.48      0.53       414
-
-    accuracy                           0.67      1061
-   macro avg       0.65      0.64      0.64      1061
-weighted avg       0.67      0.67      0.66      1061
-
-C:\Users\kylia\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\linear_model\_logistic.py:470: ConvergenceWarning: lbfgs failed to converge after 100 iteration(s) (status=1):
-STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
-
-Increase the number of iterations to improve the convergence (max_iter=100).
-You might also want to scale the data as shown in:
-    https://scikit-learn.org/stable/modules/preprocessing.html
-Please also refer to the documentation for alternative solver options:
-    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
-  n_iter_i = _check_optimize_result(
-=========================================================================== 
 RESULTS - Training with **filtered** features (after cleaning)
 ===========================================================================
 ---------------------------------------------------------------------------
 -------------------Here are predictions and probabilities ----------------
    Predictions   Proba 0   Proba 1
-0            0  0.554355  0.445645
-1            0  0.687383  0.312617
-2            0  0.585955  0.414045
-3            1  0.097820  0.902180
-4            0  0.886000  0.114000
-5            0  0.898794  0.101206
-6            1  0.243193  0.756807
-7            0  0.677534  0.322466
-8            1  0.172056  0.827944
-9            1  0.159773  0.840227
+0            0  0.554580  0.445420
+1            0  0.689086  0.310914
+2            0  0.586753  0.413247
+3            1  0.097442  0.902558
+4            0  0.885033  0.114967
+5            0  0.899216  0.100784
+6            1  0.243541  0.756459
+7            0  0.676912  0.323088
+8            1  0.173535  0.826465
+9            1  0.159934  0.840066
 ---------------------------------------------------------------------------
 -----------------------ROC/AUC Score--------------------------
-0.7863196171105586
+0.7849718880899581
 -----------------------Confusion matrix------------------------------
-[[512 135]
- [159 255]]
+[[517 130]
+ [169 245]]
 -----------------------Classification report--------------------------
               precision    recall  f1-score   support
 
-           0       0.76      0.79      0.78       647
-           1       0.65      0.62      0.63       414
+           0       0.75      0.80      0.78       647
+           1       0.65      0.59      0.62       414
 
     accuracy                           0.72      1061
-   macro avg       0.71      0.70      0.71      1061
-weighted avg       0.72      0.72      0.72      1061
+   macro avg       0.70      0.70      0.70      1061
+weighted avg       0.71      0.72      0.72      1061
 
 Best performances from grid search:
     Prob_value  StopLoss_value  Performance  Highest_Performance  \
-62        0.80           -0.01     7.111909             1.194574
-8         0.50           -0.01     6.676972             1.289350
-53        0.75           -0.01     6.127086             1.161022
+8         0.50           -0.01     7.710649             1.285570
+53        0.75           -0.01     7.238944             1.177154
+62        0.80           -0.01     6.133851             1.170063
 
     Lowest_Performance   Perf_Max  Perf_Min  Highest_Return  Lowest_Return
-62            0.989490  19.457403 -1.051017        0.036184      -0.027891
-8             0.973858  28.934998 -2.614168        0.036184      -0.027891
-53            0.957353  16.102183 -4.264707        0.036184      -0.027891
+8             0.971003  28.557012 -2.899665        0.036184      -0.027891
+53            0.985497  17.715418 -1.450274        0.036184      -0.027891
+62            0.989490  17.006264 -1.051017        0.036184      -0.027891
 Final performance of the optimized strategy:
-Performance: 7.11%
-Best parameters found : {'Prob_value': 0.8, 'Stop_loss_value': -0.01}
+Performance: 7.71%
+Best parameters found : {'Prob_value': 0.5, 'Stop_loss_value': -0.01}
 Initial Capital: 1.00
-Final Capital: 1.07
-Performance Mean: 9.46%
-Performance Standard Deviation: -94.61%
-Performance Max: 19.46%
-Performance Min: -1.05%
-Max Return: -96.38%
-Min Return: -102.79%
+Final Capital: 1.08
+Performance Mean: 12.37%
+Performance Standard Deviation :  -0.9223195461111219
+Performance Max: 28.56%
+Performance Min: -2.90%
+Max Return: 0
+Min Return: 0
+Total Trades: 375
