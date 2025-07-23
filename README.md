@@ -36,11 +36,11 @@ In this project, I explore the use of logistic regression to predict short-term 
 
 - **Using selected features**:
   - ROC AUC: **0.80**
-  - Precision*: **0.72**
-  - Recall*: **0.72**
+  - Precision*: **0.73**
+  - Recall*: **0.73**
   - F1-score: **0.73**
 
-> * Simple average between precision and recall across both classes (`0 = down`, `1 = up`)
+> * Simple average between precision, recall and f1-score across both classes (`0 = down`, `1 = up`)
 
 ---
 
